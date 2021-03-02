@@ -1,0 +1,4 @@
+name = "LoggingPlayground"
+uuid = "32083392-49f4-43b0-9c8f-8ca773495645"
+authors = ["Gustavo Goretkin <gustavo.goretkin@gmail.com>"]
+version = "0.1.0"
