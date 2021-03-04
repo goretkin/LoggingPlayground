@@ -1,3 +1,9 @@
 [submodule "julia-vscode"]
 	path = julia-vscode
 	url = git@github.com:goretkin/julia-vscode.git
+[submodule "dev/ProgressLogging"]
+	path = dev/ProgressLogging
+	url = git@github.com:goretkin/ProgressLogging.jl.git
+[submodule "dev/TerminalLoggers"]
+	path = dev/TerminalLoggers
+	url = git@github.com:goretkin/TerminalLoggers.jl.git
