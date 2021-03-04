@@ -1,0 +1,3 @@
+[submodule "julia-vscode"]
+	path = julia-vscode
+	url = git@github.com:goretkin/julia-vscode.git
