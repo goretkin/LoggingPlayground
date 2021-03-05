@@ -61,3 +61,32 @@ Pkg.activate(".")
 using LoggingPlayground
 LoggingPlayground.do_1(20)
 ```
+
+# testing
+## setup
+https://github.com/redhat-developer/vscode-extension-tester
+
+maybe should be `--save-dev` instead of `--global`, and activate something to allow `extest` to be on the path.
+`npm install --global vscode-extension-tester mocha @types/mocha`
+
+default location for `test-resources` is in the VS Code extension's root. [As mentioned](https://github.com/redhat-developer/vscode-extension-tester/wiki/Test-Setup):
+
+> To avoid build problems, make sure to exclude it from your `tsconfig` and `vsce`.
+
+So I put it elsewhere.
+
+```sh
+mkdir /tmp/test-resources
+```
+
+Note that `extest` expects to find VS Code in the test-resources directory.
+
+```sh
+extest get-vscode --storage /tmp/test-resources
+extest get-chromedriver --storage /tmp/test-resources
+```
+
+## run
+```sh
+extest run-tests --storage /tmp/test-resources ../vscode-test.ts
+```
