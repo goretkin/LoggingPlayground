@@ -87,6 +87,7 @@ extest get-chromedriver --storage /tmp/test-resources
 ```
 
 ## run
+This is not working:
 ```sh
-extest run-tests --storage /tmp/test-resources ../vscode-test.ts
+extest run-tests --storage /tmp/test-resources ../vscode-test-this-file-doesnt-appear-to-matter.ts
 ```
