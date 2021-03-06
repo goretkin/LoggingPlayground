@@ -93,7 +93,7 @@ npx extest get-chromedriver --storage /tmp/test-resources
 ## run
 Note this is a glob, so if you mis-spell it, no files will match, and the tests will "silently" pass.
 ```sh
-npx extest run-tests --storage /tmp/test-resources ../vscode-test.ts
+npx extest run-tests --storage /tmp/test-resources ../vscode-test.js
 ```
 
 ## docker
