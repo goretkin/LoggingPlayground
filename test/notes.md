@@ -92,3 +92,8 @@ This is not working:
 ```sh
 extest run-tests --storage /tmp/test-resources ../vscode-test-this-file-doesnt-appear-to-matter.ts
 ```
+
+## docker
+### gui app
+`brew install --cask xquartz`
+xhost +localhost
