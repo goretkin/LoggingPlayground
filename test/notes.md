@@ -66,8 +66,7 @@ LoggingPlayground.do_1(20)
 ## setup
 https://github.com/redhat-developer/vscode-extension-tester
 
-maybe should be `--save-dev` instead of `--global`, and activate something to allow `extest` to be on the path.
-`npm install --global vscode-extension-tester mocha @types/mocha`
+`npm install --save-dev vscode-extension-tester mocha @types/mocha`
 
 default location for `test-resources` is in the VS Code extension's root. [As mentioned](https://github.com/redhat-developer/vscode-extension-tester/wiki/Test-Setup):
 
@@ -79,11 +78,13 @@ So I put it elsewhere.
 mkdir /tmp/test-resources
 ```
 
+Use `npx extest` throughout since `vscode-extension-tester` was not installed globally.
+
 Note that `extest` expects to find VS Code in the test-resources directory.
 
 ```sh
-extest get-vscode --storage /tmp/test-resources
-extest get-chromedriver --storage /tmp/test-resources
+npx extest get-vscode --storage /tmp/test-resources
+npx extest get-chromedriver --storage /tmp/test-resources
 ```
 
 ## run
