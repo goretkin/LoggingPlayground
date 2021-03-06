@@ -7,3 +7,9 @@
 [submodule "dev/TerminalLoggers"]
 	path = dev/TerminalLoggers
 	url = git@github.com:goretkin/TerminalLoggers.jl.git
+[submodule "vscode-extension-tester"]
+	path = vscode-extension-tester
+	url = https://github.com/redhat-developer/vscode-extension-tester
+[submodule "opencv4nodejs"]
+	path = opencv4nodejs
+	url = git@github.com:nut-tree/opencv4nodejs.git
