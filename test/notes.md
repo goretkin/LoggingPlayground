@@ -1,24 +1,48 @@
 
 # Install stuff
 
-## `npm`
-`brew install npm`
+## Node.js
+You can install `node` and `npm` directly, especially if you might use different versions of Node.js.
+However, you might prefer to use [`nvm`, the Node Version Manager](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-## `webpack`
-(https://webpack.js.org/guides/installation/)
-`npm install -g webpack`
-`npm install -g webpack-cli`
+### using nvm
+nvm might be installed as a shell alias, so e.g. `which nvm` will return nothing.
+
+After `nvm` is installed, install and "activate" a node "environment":
+
+```sh
+nvm install 14
+nvm use 14
+```
+This modifies your `PATH` environment variable so that executables `node` and `npm` can be found.
+On its own, it does not e.g. modify `.bashrc`, so you will need to run `nvm use $version` as often as you might need to run e.g. `conda activate $environment`.
+
+
+## webpack
+[reference](https://webpack.js.org/guides/installation/)
+
+```sh
+npm install -g webpack
+npm install -g webpack-cli
+```
+
+`-g` installs the node package globally. None of this is not needed since it is a dev dependency of `julia-vscode`.
+
 ## julia-vscode repo
-`git clone git@github.com:julia-vscode/julia-vscode.git`
-cd there
-`git submodule init`
-`git submodule update`
+```sh
+git clone git@github.com:julia-vscode/julia-vscode.git
+cd julia-vscode
+git submodule init
+git submodule update
+```
+(this step really should be documented. see e.g. https://github.com/julia-vscode/julia-vscode/issues/1900#issuecomment-778776914)
 
 
 # setup build npm environment
-(from `package.json`)
+A node package contains a file `package.json` that specifies its name, version, dependencies, etc.
+The file `package.json` also specifies "scripts", which can be run with `npm run $script_name`.
 
-`npm install`
+Run `npm install` to install dependencies. They will be placed in the directory `node_modules`.
 
 # Run the extension
 ## With VS Code and `launch.json`
@@ -65,6 +89,11 @@ LoggingPlayground.do_1(20)
 # testing
 need to use node@14 and npm@6
 https://github.com/redhat-developer/vscode-extension-tester/issues/253
+
+```sh
+nvm install 14
+nvm use 14
+```
 
 ## setup
 https://github.com/redhat-developer/vscode-extension-tester
